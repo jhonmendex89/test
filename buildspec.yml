@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Instalando dependencias..."
+      - npm install
+  pre_build:
+    commands:
+      - echo "Ejecutando pruebas..."
+      - npm test
+  build:
+    commands:
+      - echo "Construcción completada correctamente."
+  post_build:
+    commands:
+      - echo "Generando artefactos..."
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: yes
